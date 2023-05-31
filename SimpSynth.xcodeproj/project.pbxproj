@@ -11,6 +11,9 @@
 		03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC72A27DC73005FCB49 /* ContentView.swift */; };
 		03896ECA2A27DC75005FCB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03896EC92A27DC75005FCB49 /* Assets.xcassets */; };
 		03896ECD2A27DC75005FCB49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03896ECC2A27DC75005FCB49 /* Preview Assets.xcassets */; };
+		03896EDB2A27DF9B005FCB49 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDA2A27DF9B005FCB49 /* AudioKit */; };
+		03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */; };
+		03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDF2A27E4E7005FCB49 /* Keyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		03896EC72A27DC73005FCB49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03896EC92A27DC75005FCB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03896ECC2A27DC75005FCB49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMIDI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03896EDB2A27DF9B005FCB49 /* AudioKit in Frameworks */,
+				03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +57,12 @@
 		03896EC42A27DC73005FCB49 /* SimpSynth */ = {
 			isa = PBXGroup;
 			children = (
-				03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */,
-				03896EC72A27DC73005FCB49 /* ContentView.swift */,
-				03896EC92A27DC75005FCB49 /* Assets.xcassets */,
-				03896ECB2A27DC75005FCB49 /* Preview Content */,
+				03896ED32A27DD9C005FCB49 /* App */,
+				03896ED42A27DDB9005FCB49 /* Models */,
+				03896ED52A27DDE8005FCB49 /* Views */,
+				03896ED62A27DE54005FCB49 /* ViewModels */,
+				03896ED72A27DE6F005FCB49 /* Services */,
+				03896ED82A27DE76005FCB49 /* Resources */,
 			);
 			path = SimpSynth;
 			sourceTree = "<group>";
@@ -65,6 +73,53 @@
 				03896ECC2A27DC75005FCB49 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03896ED32A27DD9C005FCB49 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		03896ED42A27DDB9005FCB49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03896ED52A27DDE8005FCB49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03896EC72A27DC73005FCB49 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03896ED62A27DE54005FCB49 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		03896ED72A27DE6F005FCB49 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		03896ED82A27DE76005FCB49 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03896EC92A27DC75005FCB49 /* Assets.xcassets */,
+				03896ECB2A27DC75005FCB49 /* Preview Content */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +138,10 @@
 			dependencies = (
 			);
 			name = SimpSynth;
+			packageProductDependencies = (
+				03896EDA2A27DF9B005FCB49 /* AudioKit */,
+				03896EDF2A27E4E7005FCB49 /* Keyboard */,
+			);
 			productName = SimpSynth;
 			productReference = 03896EC22A27DC73005FCB49 /* SimpSynth.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +170,10 @@
 				Base,
 			);
 			mainGroup = 03896EB92A27DC73005FCB49;
+			packageReferences = (
+				03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */,
+			);
 			productRefGroup = 03896EC32A27DC73005FCB49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */,
+				03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */,
 				03896EC62A27DC73005FCB49 /* SimpSynthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,15 +330,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SimpSynth/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "SimpSynth/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 6Z3S569SKT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thundertech.SimpSynth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -295,15 +362,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SimpSynth/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "SimpSynth/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = 6Z3S569SKT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +378,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thundertech.SimpSynth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +409,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/Keyboard";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03896EDA2A27DF9B005FCB49 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		03896EDF2A27E4E7005FCB49 /* Keyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */;
+			productName = Keyboard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03896EBA2A27DC73005FCB49 /* Project object */;
 }
