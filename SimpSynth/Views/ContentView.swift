@@ -22,23 +22,36 @@ struct ContentView: View {
             
             VStack {
                 
-                Keyboard(layout: .piano (pitchRange: Pitch(60) ... Pitch(70))) { pitch, isActivated in
+                Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(70)),
+                         noteOn: audioMIDI.noteOn, noteOff: audioMIDI.noteOff) { pitch, isActivated in
                     KeyboardKey(pitch: pitch,
                                 isActivated: isActivated,
                                 text: "",
                                 pressedColor: Color(.purple),
                                 alignment: .center)
+                    .gesture(DragGesture(minimumDistance: 0)
+                               .onChanged { _ in
+                                   self.audioMIDI.noteOn(pitch: pitch, point: .zero)
+                               }
+                               .onEnded { _ in
+                                   self.audioMIDI.noteOff(pitch: pitch)
+                               })
                 }
+             
+                
                     
                     .padding(.all)
                     .background(.black)
                     
                     .onAppear {
-                        audioMIDI.activateMIDI()
+                            do {
+                                try audioMIDI.audioEngine.start()
+                            } catch {
+                                print("Error starting audio engine: \(error)")
+                            }
                         }
-                    .onDisappear {
-                        audioMIDI.deactivateMIDI()
-                    }
+                
+                    
                     
                     .environmentObject(audioMIDI)
                     
@@ -51,6 +64,8 @@ struct ContentView: View {
         
        
     }
+
+    
     
        
     

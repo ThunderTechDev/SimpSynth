@@ -10,24 +10,37 @@ import AudioKit
 import Keyboard
 
 class AudioMIDI: ObservableObject {
-    let midi = MIDI()
+    let audioEngine = AVAudioEngine()
+    private let midiSampler = AVAudioUnitSampler()
     
-    func activateMIDI () {
-        midi.openOutput()
+    init() {
+        setupAudioEngine()
     }
     
-    func deactivateMIDI () {
-        midi.closeInput()
+    private func setupAudioEngine() {
+        audioEngine.attach(midiSampler)
+        
+        audioEngine.connect(midiSampler, to: audioEngine.mainMixerNode, format: nil)
+        
+        do {
+            try audioEngine.start()
+            if let url = Bundle.main.url(forResource: "8bits", withExtension: "SF2", subdirectory: "Resources") {
+                try midiSampler.loadPreset(at: url)
+            }
+        } catch {
+            print("Error al iniciar AVAudioEngine: \(error)")
+        }
     }
-    
-    //Funciones provisionales para llamar desde el teclado
     
     func noteOn(pitch: Pitch, point: CGPoint) {
-        print("note on \(pitch)")
+        let midiNoteNumber = 20 //número provisional
+        midiSampler.startNote(UInt8(midiNoteNumber), withVelocity: 127, onChannel: 0)
+        print("note on \(midiNoteNumber)")
     }
 
     func noteOff(pitch: Pitch) {
-        print("note off \(pitch)")
+        let midiNoteNumber = 20 //número provisional
+        midiSampler.stopNote(UInt8(midiNoteNumber), onChannel: 0)
+        print("note off \(midiNoteNumber)")
     }
-    
 }
