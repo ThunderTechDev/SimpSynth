@@ -33,13 +33,13 @@ class AudioMIDI: ObservableObject {
     }
     
     func noteOn(pitch: Pitch, point: CGPoint) {
-        let midiNoteNumber = 20 //número provisional
+        let midiNoteNumber = UInt8(pitch) //número provisional
         midiSampler.startNote(UInt8(midiNoteNumber), withVelocity: 127, onChannel: 0)
         print("note on \(midiNoteNumber)")
     }
 
     func noteOff(pitch: Pitch) {
-        let midiNoteNumber = 20 //número provisional
+        let midiNoteNumber = 60 //número provisional
         midiSampler.stopNote(UInt8(midiNoteNumber), onChannel: 0)
         print("note off \(midiNoteNumber)")
     }
