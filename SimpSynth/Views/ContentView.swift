@@ -22,7 +22,7 @@ struct ContentView: View {
             
             VStack {
                 
-                Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(70)),
+                Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(72)),
                          noteOn: audioMIDI.noteOn, noteOff: audioMIDI.noteOff) { pitch, isActivated in
                     KeyboardKey(pitch: pitch,
                                 isActivated: isActivated,
