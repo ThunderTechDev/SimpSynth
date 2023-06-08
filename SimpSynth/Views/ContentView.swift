@@ -11,13 +11,14 @@ import Keyboard
 
 struct ContentView: View {
     @StateObject var audioMIDI = AudioMIDI()
-    @State private var rotationKnob1: Double = 0
-    @State private var rotationKnob2: Double = 0
-    @State private var rotationKnob3: Double = 0
-    @State private var rotationKnob4: Double = 0
+    
     
     
     var body: some View {
+        
+    
+        
+        
         ZStack {
             
             Color.black
@@ -26,10 +27,10 @@ struct ContentView: View {
             VStack {
                 
                 HStack {
-                        knobView(title: "Volumen", rotation: $rotationKnob1)
-                        knobView(title: "Release", rotation: $rotationKnob2)
-                        knobView(title: "Reverb", rotation: $rotationKnob3)
-                        knobView(title: "Delay", rotation: $rotationKnob4)
+                    KnobView(knobViewModel: KnobViewModel(title: "Volume", audioMIDI: audioMIDI))
+                    KnobView(knobViewModel: KnobViewModel(title: "Reverb", audioMIDI: audioMIDI))
+                    KnobView(knobViewModel: KnobViewModel(title: "Delay", audioMIDI: audioMIDI))
+                    KnobView(knobViewModel: KnobViewModel(title: "Release", audioMIDI: audioMIDI))
                     }
                              
                 
@@ -76,25 +77,6 @@ struct ContentView: View {
        
     }
 
-    func knobView(title: String, rotation: Binding<Double>) -> some View {
-        VStack {
-            Text(title)
-                .font(.body)
-                .foregroundColor(.white)
-
-            Image("Knob")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .rotationEffect(Angle(degrees: rotation.wrappedValue))
-                .gesture(DragGesture(minimumDistance: 0)
-                            .onChanged { gesture in
-                                // Actualizar el valor de la rotación en función del movimiento del arrastre
-                                rotation.wrappedValue = Double(gesture.translation.height)
-                                print(Double(gesture.translation.height))
-                                // Aquí también puedes actualizar el volumen en función de la rotación
-                            })
-        }
-    }
     
        
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031E1D8F2A32701E002EB31D /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1D8E2A32701E002EB31D /* KnobView.swift */; };
+		031E1D912A32715E002EB31D /* KnobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1D902A32715E002EB31D /* KnobViewModel.swift */; };
 		03505ADE2A29484800F9D472 /* 8bitsf.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = 03505ADD2A29484800F9D472 /* 8bitsf.SF2 */; };
 		03896EC62A27DC73005FCB49 /* SimpSynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */; };
 		03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC72A27DC73005FCB49 /* ContentView.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031E1D8E2A32701E002EB31D /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
+		031E1D902A32715E002EB31D /* KnobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobViewModel.swift; sourceTree = "<group>"; };
 		03505ADD2A29484800F9D472 /* 8bitsf.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8bitsf.SF2; sourceTree = "<group>"; };
 		03896EC22A27DC73005FCB49 /* SimpSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpSynthApp.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				03896EC72A27DC73005FCB49 /* ContentView.swift */,
+				031E1D8E2A32701E002EB31D /* KnobView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 		03896ED62A27DE54005FCB49 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				031E1D902A32715E002EB31D /* KnobViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -205,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */,
+				031E1D912A32715E002EB31D /* KnobViewModel.swift in Sources */,
 				03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */,
+				031E1D8F2A32701E002EB31D /* KnobView.swift in Sources */,
 				03896EC62A27DC73005FCB49 /* SimpSynthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
