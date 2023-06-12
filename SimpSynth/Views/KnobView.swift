@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct KnobView: View {
-    
     @ObservedObject var knobViewModel: KnobViewModel
 
     var body: some View {
         VStack {
             HStack {
                 Text(knobViewModel.title)
-                .font(.body)
-                .foregroundColor(.white)
-                
-                Text(String(knobViewModel.rotation))
-                .font(.body)
-                .foregroundColor(.white)
+                    .font(.body)
+                    .foregroundColor(.white)
+
+                Text(String(knobViewModel.rotationValue))
+                    .font(.body)
+                    .foregroundColor(.white)
             }
-                
 
             Image("Knob")
                 .resizable()
@@ -33,7 +31,6 @@ struct KnobView: View {
                         .onChanged { gesture in
                             knobViewModel.updateRotation(from: gesture)
                         }
-                    
                         .onEnded { _ in
                             knobViewModel.resetGestureValue()
                         }
