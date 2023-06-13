@@ -30,7 +30,9 @@ class KnobViewModel: ObservableObject {
     }
 
     func updateAudioMIDI() {
-        // Aquí es donde actualizarías tu modelo de AudioMIDI basándote en la rotación
+        // Actualiza el volumen del midiSampler en tu modelo de AudioMIDI basándote en la rotación
+        let volume = Double(rotationValue) / 100
+        audioMIDI.midiSampler.volume = Float(volume)
     }
 
     func resetGestureValue() {

@@ -30,9 +30,11 @@ struct KnobView: View {
                     DragGesture()
                         .onChanged { gesture in
                             knobViewModel.updateRotation(from: gesture)
+                           
                         }
                         .onEnded { _ in
                             knobViewModel.resetGestureValue()
+                           
                         }
                 )
         }

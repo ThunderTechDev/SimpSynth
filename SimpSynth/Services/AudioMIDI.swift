@@ -11,7 +11,9 @@ import Keyboard
 
 class AudioMIDI: ObservableObject {
     let audioEngine = AVAudioEngine()
-    private let midiSampler = AVAudioUnitSampler()
+    let midiSampler = AVAudioUnitSampler()
+    
+    
     
     init() {
         setupAudioEngine()
