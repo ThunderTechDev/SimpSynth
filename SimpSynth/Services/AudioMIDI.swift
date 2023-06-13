@@ -17,6 +17,7 @@ class AudioMIDI: ObservableObject {
     
     init() {
         setupAudioEngine()
+        midiSampler.volume = 0
     }
     
     private func setupAudioEngine() {
@@ -38,6 +39,7 @@ class AudioMIDI: ObservableObject {
         let midiNoteNumber = UInt8(pitch.midiNoteNumber)
         midiSampler.startNote(midiNoteNumber, withVelocity: 127, onChannel: 0)
         print("note on \(midiNoteNumber)")
+        print(midiSampler.volume)
     }
     
     func noteOff(pitch: Pitch) {
