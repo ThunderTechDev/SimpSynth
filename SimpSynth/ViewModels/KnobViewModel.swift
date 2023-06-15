@@ -23,11 +23,12 @@ class KnobViewModel: ObservableObject {
     var audioMIDI: AudioMIDI
     var control: AudioControl
 
-       init(title: String, initialValue: Double, audioMIDI: AudioMIDI, control: AudioControl) {
+    init(title: String, initialValue: Double, audioMIDI: AudioMIDI, control: AudioControl, previousRotation: Double) {
            self.title = title
            self.rotation = initialValue
            self.audioMIDI = audioMIDI
            self.control = control
+           self.previousRotation = previousRotation
        }
 
     func updateRotation(from gesture: DragGesture.Value) {
@@ -37,6 +38,7 @@ class KnobViewModel: ObservableObject {
         previousGestureValue = gesture.translation.height
         previousRotation = rotation
         updateAudioMIDI()
+
     }
 
     func updateAudioMIDI() {
@@ -45,7 +47,7 @@ class KnobViewModel: ObservableObject {
             case .volume:
                 let volume = Double(rotationValue) / 100
                 audioMIDI.midiSampler.volume = Float(volume)
-                print("actualizado el volumen a \(audioMIDI.midiSampler.volume)")
+                print("El volumen es \(audioMIDI.midiSampler.volume)")
             case .reverb:
                 return
             case .delay:

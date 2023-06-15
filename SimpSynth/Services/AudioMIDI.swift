@@ -12,12 +12,13 @@ import Keyboard
 class AudioMIDI: ObservableObject {
     let audioEngine = AVAudioEngine()
     let midiSampler = AVAudioUnitSampler()
+
     
     
     
     init() {
         setupAudioEngine()
-        midiSampler.volume = 0
+        midiSampler.volume = 0.5
     }
     
     private func setupAudioEngine() {
@@ -38,13 +39,12 @@ class AudioMIDI: ObservableObject {
     func noteOn(pitch: Pitch, point: CGPoint) {
         let midiNoteNumber = UInt8(pitch.midiNoteNumber)
         midiSampler.startNote(midiNoteNumber, withVelocity: 127, onChannel: 0)
-        print("note on \(midiNoteNumber)")
-        print(midiSampler.volume)
+
     }
     
     func noteOff(pitch: Pitch) {
         let midiNoteNumber = UInt8(pitch.midiNoteNumber)
         midiSampler.stopNote(midiNoteNumber, onChannel: 0)
-        print("note off \(midiNoteNumber)")
+
     }
 }
