@@ -21,10 +21,10 @@ struct ContentView: View {
     init() {
         let audioMIDI = AudioMIDI()
         _audioMIDI = StateObject(wrappedValue: audioMIDI)
-        _volumeKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Volume", initialValue: 182, audioMIDI: audioMIDI, control: .volume, previousRotation: 182))
+        _volumeKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Volume", initialValue: 0, audioMIDI: audioMIDI, control: .volume, previousRotation: 0))
         _reverbKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Reverb", initialValue: 0.0, audioMIDI: audioMIDI, control: .reverb, previousRotation: 0))
         _delayKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Delay", initialValue: 0.0, audioMIDI: audioMIDI, control: .delay, previousRotation: 0))
-        _releaseKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Release", initialValue: 0.5, audioMIDI: audioMIDI, control: .release, previousRotation: 0))
+        _releaseKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Release", initialValue: 0.0, audioMIDI: audioMIDI, control: .release, previousRotation: 0))
     }
 
     var body: some View {

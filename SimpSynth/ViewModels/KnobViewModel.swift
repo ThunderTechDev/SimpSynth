@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AudioKit
+import AudioKitEX
 
 enum AudioControl {
     case volume
@@ -46,12 +48,15 @@ class KnobViewModel: ObservableObject {
             switch control {
             case .volume:
                 let volume = Double(rotationValue) / 100
-                audioMIDI.midiSampler.volume = Float(volume)
-                print("El volumen es \(audioMIDI.midiSampler.volume)")
+                audioMIDI.sampler.volume = Float(volume)
+                print("El volumen es \(audioMIDI.sampler.volume)")
             case .reverb:
-                return
+                let reverbMix = Double(rotationValue) / 100
+                audioMIDI.reverb.dryWetMix = Float(reverbMix)
             case .delay:
-                return
+                let delayMix = Double(rotationValue) / 100
+                audioMIDI.delay.dryWetMix = Float(delayMix)
+                print("Delay DryWetMix = \(audioMIDI.delay.dryWetMix)")
             case .release:
                 return
             }
