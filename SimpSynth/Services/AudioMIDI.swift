@@ -7,44 +7,62 @@
 
 import AVFoundation
 import AudioKit
+import AudioKitEX
 import Keyboard
 
 class AudioMIDI: ObservableObject {
-    let audioEngine = AVAudioEngine()
-    let midiSampler = AVAudioUnitSampler()
+    let engine = AudioEngine()
+    var sampler: AudioKit.MIDISampler
+    var reverb: Reverb
+    var delay: Delay
+
+
+    
 
     
     
     
     init() {
-        setupAudioEngine()
-        midiSampler.volume = 0.5
-    }
-    
-    private func setupAudioEngine() {
-        audioEngine.attach(midiSampler)
+           
+            sampler = AudioKit.MIDISampler()
+            sampler.volume = 0
         
-        audioEngine.connect(midiSampler, to: audioEngine.mainMixerNode, format: nil)
+            delay = Delay(sampler)
+            delay.feedback = 30.00
+            delay.time = 0.5
+            delay.dryWetMix = 0
         
-        do {
-            try audioEngine.start()
-            if let url = Bundle.main.url(forResource: "8bits", withExtension: "SF2", subdirectory: "Resources") {
-                try midiSampler.loadPreset(at: url)
+            reverb = Reverb(delay)
+            reverb.dryWetMix = 0
+            reverb.loadFactoryPreset(.largeHall)
+            
+            
+            
+            engine.output = reverb
+            
+            
+            // Asegúrate de empezar el motor de AudioKit
+            do {
+                try engine.start()
+                
+                
+            } catch {
+                print("Error al iniciar el motor de AudioKit: \(error)")
             }
-        } catch {
-            print("Error al iniciar AVAudioEngine: \(error)")
+            
+            
+        
         }
-    }
     
     func noteOn(pitch: Pitch, point: CGPoint) {
         let midiNoteNumber = UInt8(pitch.midiNoteNumber)
-        midiSampler.startNote(midiNoteNumber, withVelocity: 127, onChannel: 0)
+        sampler.play(noteNumber: midiNoteNumber, velocity: 127, channel: 0)
 
     }
     
     func noteOff(pitch: Pitch) {
         let midiNoteNumber = UInt8(pitch.midiNoteNumber)
-        midiSampler.stopNote(midiNoteNumber, onChannel: 0)
+        sampler.stop(noteNumber: midiNoteNumber, channel: 0)
 
     }
 }
