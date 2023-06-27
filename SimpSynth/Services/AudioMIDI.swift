@@ -10,11 +10,13 @@ import AudioKit
 import AudioKitEX
 import Keyboard
 
+
 class AudioMIDI: ObservableObject {
     let engine = AudioEngine()
     var sampler: AudioKit.MIDISampler
     var reverb: Reverb
     var delay: Delay
+
 
 
     
@@ -25,7 +27,8 @@ class AudioMIDI: ObservableObject {
     init() {
            
             sampler = AudioKit.MIDISampler()
-            sampler.volume = 0
+            sampler.volume = 1
+            
         
             delay = Delay(sampler)
             delay.feedback = 30.00
@@ -38,8 +41,8 @@ class AudioMIDI: ObservableObject {
             
             
             
-            engine.output = reverb
-            
+            engine.output = (reverb)
+            engine.mainMixerNode?.volume = 0.88
             
             // Asegúrate de empezar el motor de AudioKit
             do {

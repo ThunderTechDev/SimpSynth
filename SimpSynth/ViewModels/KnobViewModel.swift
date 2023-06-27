@@ -48,8 +48,8 @@ class KnobViewModel: ObservableObject {
             switch control {
             case .volume:
                 let volume = Double(rotationValue) / 100
-                audioMIDI.sampler.volume = Float(volume)
-                print("El volumen es \(audioMIDI.sampler.volume)")
+                audioMIDI.engine.mainMixerNode?.volume = Float(volume)
+                print("El volumen es \(String(describing: audioMIDI.engine.mainMixerNode?.volume))")
             case .reverb:
                 let reverbMix = Double(rotationValue) / 100
                 audioMIDI.reverb.dryWetMix = Float(reverbMix)
