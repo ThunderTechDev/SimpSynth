@@ -12,7 +12,7 @@ import Keyboard
 struct ContentView: View {
     @StateObject var audioMIDI = AudioMIDI()
 
-    // Crea una @StateObject para cada KnobViewModel
+    
     @StateObject var volumeKnobViewModel: KnobViewModel
     @StateObject var reverbKnobViewModel: KnobViewModel
     @StateObject var delayKnobViewModel: KnobViewModel
