@@ -44,7 +44,7 @@ class AudioMIDI: ObservableObject {
             engine.output = (reverb)
             engine.mainMixerNode?.volume = 0.88
             
-            // Asegúrate de empezar el motor de AudioKit
+        
             do {
                 try engine.start()
                 
