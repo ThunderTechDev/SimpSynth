@@ -28,7 +28,6 @@ class AudioMIDI: ObservableObject {
            
             sampler = AudioKit.MIDISampler()
             sampler.volume = 1
-        
             
         
             delay = Delay(sampler)
