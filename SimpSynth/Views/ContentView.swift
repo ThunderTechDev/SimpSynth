@@ -28,7 +28,7 @@ struct ContentView: View {
     }
 
     var body: some View {
-        // Contenido de tu vista
+       
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
             VStack {
