@@ -21,7 +21,7 @@ struct ContentView: View {
     init() {
         let audioMIDI = AudioMIDI()
         _audioMIDI = StateObject(wrappedValue: audioMIDI)
-        _volumeKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Volume", initialValue: 320, audioMIDI: audioMIDI, control: .volume, previousRotation: 320))
+        _volumeKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Volume", initialValue: 100, audioMIDI: audioMIDI, control: .volume, previousRotation: 100))
         _reverbKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Reverb", initialValue: 0.0, audioMIDI: audioMIDI, control: .reverb, previousRotation: 0))
         _delayKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Delay", initialValue: 0.0, audioMIDI: audioMIDI, control: .delay, previousRotation: 0))
         _releaseKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Release", initialValue: 0.0, audioMIDI: audioMIDI, control: .release, previousRotation: 0))

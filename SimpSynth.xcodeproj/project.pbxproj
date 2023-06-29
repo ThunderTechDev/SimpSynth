@@ -10,7 +10,6 @@
 		031E1D8F2A32701E002EB31D /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1D8E2A32701E002EB31D /* KnobView.swift */; };
 		031E1D912A32715E002EB31D /* KnobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1D902A32715E002EB31D /* KnobViewModel.swift */; };
 		033D8F5A2A4A3CF1007E6503 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 033D8F592A4A3CF1007E6503 /* AudioKitEX */; };
-		03505ADE2A29484800F9D472 /* 8bitsf.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = 03505ADD2A29484800F9D472 /* 8bitsf.SF2 */; };
 		03896EC62A27DC73005FCB49 /* SimpSynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */; };
 		03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC72A27DC73005FCB49 /* ContentView.swift */; };
 		03896ECA2A27DC75005FCB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03896EC92A27DC75005FCB49 /* Assets.xcassets */; };
@@ -18,18 +17,19 @@
 		03896EDB2A27DF9B005FCB49 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDA2A27DF9B005FCB49 /* AudioKit */; };
 		03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */; };
 		03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDF2A27E4E7005FCB49 /* Keyboard */; };
+		03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 03A81E492A4E358E0001C2FB /* Sound.sf2 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		031E1D8E2A32701E002EB31D /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
 		031E1D902A32715E002EB31D /* KnobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobViewModel.swift; sourceTree = "<group>"; };
-		03505ADD2A29484800F9D472 /* 8bitsf.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8bitsf.SF2; sourceTree = "<group>"; };
 		03896EC22A27DC73005FCB49 /* SimpSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpSynthApp.swift; sourceTree = "<group>"; };
 		03896EC72A27DC73005FCB49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03896EC92A27DC75005FCB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03896ECC2A27DC75005FCB49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMIDI.swift; sourceTree = "<group>"; };
+		03A81E492A4E358E0001C2FB /* Sound.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.sf2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 		03896ED82A27DE76005FCB49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				03505ADD2A29484800F9D472 /* 8bitsf.SF2 */,
+				03A81E492A4E358E0001C2FB /* Sound.sf2 */,
 				03896EC92A27DC75005FCB49 /* Assets.xcassets */,
 				03896ECB2A27DC75005FCB49 /* Preview Content */,
 			);
@@ -201,8 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03505ADE2A29484800F9D472 /* 8bitsf.SF2 in Resources */,
 				03896ECD2A27DC75005FCB49 /* Preview Assets.xcassets in Resources */,
+				03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */,
 				03896ECA2A27DC75005FCB49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

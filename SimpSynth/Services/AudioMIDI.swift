@@ -19,6 +19,7 @@ class AudioMIDI: ObservableObject {
 
 
 
+
     
 
     
@@ -28,7 +29,11 @@ class AudioMIDI: ObservableObject {
            
             sampler = AudioKit.MIDISampler()
             sampler.volume = 1
-            
+            do {
+                try sampler.loadSoundFont("Sound", preset: 0, bank: 0)
+            } catch {
+                print( "Error cargando el archivo Soundfont")
+            }
         
             delay = Delay(sampler)
             delay.feedback = 30.00
@@ -42,7 +47,7 @@ class AudioMIDI: ObservableObject {
             
             
             engine.output = (reverb)
-            engine.mainMixerNode?.volume = 0.88
+            engine.mainMixerNode?.volume = 0.27
             
         
             do {
