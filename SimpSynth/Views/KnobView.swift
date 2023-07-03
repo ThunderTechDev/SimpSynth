@@ -15,7 +15,7 @@ struct KnobView: View {
             HStack {
                 Text(knobViewModel.title)
                     .font(.body)
-                    .foregroundColor(.white)
+                    .foregroundColor(.purple)
 
                 Text(String(knobViewModel.rotationValue))
                     .font(.body)

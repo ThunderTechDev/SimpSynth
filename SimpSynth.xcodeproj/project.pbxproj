@@ -18,6 +18,7 @@
 		03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */; };
 		03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDF2A27E4E7005FCB49 /* Keyboard */; };
 		03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 03A81E492A4E358E0001C2FB /* Sound.sf2 */; };
+		03B990BC2A5368B1008C44E2 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03B990BB2A5368B1008C44E2 /* AudioKitUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			files = (
 				033D8F5A2A4A3CF1007E6503 /* AudioKitEX in Frameworks */,
 				03896EDB2A27DF9B005FCB49 /* AudioKit in Frameworks */,
+				03B990BC2A5368B1008C44E2 /* AudioKitUI in Frameworks */,
 				03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +155,7 @@
 				03896EDA2A27DF9B005FCB49 /* AudioKit */,
 				03896EDF2A27E4E7005FCB49 /* Keyboard */,
 				033D8F592A4A3CF1007E6503 /* AudioKitEX */,
+				03B990BB2A5368B1008C44E2 /* AudioKitUI */,
 			);
 			productName = SimpSynth;
 			productReference = 03896EC22A27DC73005FCB49 /* SimpSynth.app */;
@@ -186,6 +189,7 @@
 				03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */,
 				033D8F582A4A3CF1007E6503 /* XCRemoteSwiftPackageReference "AudioKitEX" */,
+				03B990BA2A5368B1008C44E2 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 			);
 			productRefGroup = 03896EC32A27DC73005FCB49 /* Products */;
 			projectDirPath = "";
@@ -451,6 +455,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		03B990BA2A5368B1008C44E2 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -468,6 +480,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */;
 			productName = Keyboard;
+		};
+		03B990BB2A5368B1008C44E2 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03B990BA2A5368B1008C44E2 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

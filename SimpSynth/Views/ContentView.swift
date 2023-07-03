@@ -8,15 +8,15 @@
 import SwiftUI
 import AudioKit
 import Keyboard
+import AudioKitUI
 
 struct ContentView: View {
     @StateObject var audioMIDI = AudioMIDI()
-
-    
     @StateObject var volumeKnobViewModel: KnobViewModel
     @StateObject var reverbKnobViewModel: KnobViewModel
     @StateObject var delayKnobViewModel: KnobViewModel
-    @StateObject var releaseKnobViewModel: KnobViewModel
+    var waveView: NodeOutputView
+    
 
     init() {
         let audioMIDI = AudioMIDI()
@@ -24,7 +24,8 @@ struct ContentView: View {
         _volumeKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Volume", initialValue: 100, audioMIDI: audioMIDI, control: .volume, previousRotation: 100))
         _reverbKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Reverb", initialValue: 0.0, audioMIDI: audioMIDI, control: .reverb, previousRotation: 0))
         _delayKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Delay", initialValue: 0.0, audioMIDI: audioMIDI, control: .delay, previousRotation: 0))
-        _releaseKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Release", initialValue: 0.0, audioMIDI: audioMIDI, control: .release, previousRotation: 0))
+        waveView = NodeOutputView(audioMIDI.reverb, color: .purple, backgroundColor: .black, bufferSize: 1024)
+       
     }
 
     var body: some View {
@@ -36,7 +37,16 @@ struct ContentView: View {
                     KnobView(knobViewModel: volumeKnobViewModel)
                     KnobView(knobViewModel: reverbKnobViewModel)
                     KnobView(knobViewModel: delayKnobViewModel)
-                    KnobView(knobViewModel: releaseKnobViewModel)
+                    ZStack {
+                            RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.purple, lineWidth: 3)
+                            waveView
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            }
+                        
+                            .padding()
+                                            
+                    
                 }
                 Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(72)),
                                       noteOn: audioMIDI.noteOn, noteOff: audioMIDI.noteOff) { pitch, isActivated in

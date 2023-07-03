@@ -12,6 +12,8 @@ import Keyboard
 
 
 class AudioMIDI: ObservableObject {
+    
+
     let engine = AudioEngine()
     var sampler: AudioKit.MIDISampler
     var reverb: Reverb
@@ -26,7 +28,9 @@ class AudioMIDI: ObservableObject {
     
     
     init() {
+        
            
+        
             sampler = AudioKit.MIDISampler()
             sampler.volume = 1
             do {
