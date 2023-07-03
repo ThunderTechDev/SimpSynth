@@ -13,7 +13,6 @@ enum AudioControl {
     case volume
     case reverb
     case delay
-    case release
 }
 
 
@@ -57,8 +56,6 @@ class KnobViewModel: ObservableObject {
                 let delayMix = Double(rotationValue) 
                 audioMIDI.delay.dryWetMix = Float(delayMix)
                 print("Delay DryWetMix = \(audioMIDI.delay.dryWetMix)")
-            case .release:
-                return
             }
         }
 

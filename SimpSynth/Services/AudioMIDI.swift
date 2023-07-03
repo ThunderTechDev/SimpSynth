@@ -12,21 +12,19 @@ import Keyboard
 
 
 class AudioMIDI: ObservableObject {
+    
+
     let engine = AudioEngine()
     var sampler: AudioKit.MIDISampler
     var reverb: Reverb
     var delay: Delay
 
-
-
-
-    
-
-    
-    
+  
     
     init() {
+        
            
+        
             sampler = AudioKit.MIDISampler()
             sampler.volume = 1
             do {

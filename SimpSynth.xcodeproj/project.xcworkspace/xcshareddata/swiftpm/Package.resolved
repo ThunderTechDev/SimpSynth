@@ -19,12 +19,30 @@
       }
     },
     {
+      "identity" : "audiokitui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKitUI",
+      "state" : {
+        "revision" : "5c41de4c021567e8d4f187f6d79d96dfcef704f6",
+        "version" : "0.3.5"
+      }
+    },
+    {
+      "identity" : "controls",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/Controls.git",
+      "state" : {
+        "revision" : "6861a9380963378115856f0b9b54414a9ec5f1ad",
+        "version" : "1.1.2"
+      }
+    },
+    {
       "identity" : "keyboard",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AudioKit/Keyboard",
       "state" : {
-        "revision" : "531d0d1224cbbcace6f55ebfe0a847feca8c2cd0",
-        "version" : "1.3.5"
+        "revision" : "fb589acbbb0854da0fa571ad83c4f1230c2cd280",
+        "version" : "1.3.6"
       }
     },
     {
