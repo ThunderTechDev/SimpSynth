@@ -35,19 +35,23 @@ struct ContentView: View {
             VStack {
                 HStack {
                     KnobView(knobViewModel: volumeKnobViewModel)
+                        .padding(.horizontal, 1)
                     KnobView(knobViewModel: reverbKnobViewModel)
+                        .padding(.horizontal, 1)
                     KnobView(knobViewModel: delayKnobViewModel)
+                        .padding(.horizontal, 1)
                     ZStack {
                             RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.purple, lineWidth: 3)
+                            .stroke(Color.purple, lineWidth: 12)
                             waveView
                             .clipShape(RoundedRectangle(cornerRadius: 20))
-                            }
+                    }.padding(.horizontal, 10)
+                     .padding(.vertical, 6)
                         
-                            .padding()
                                             
                     
-                }
+                } .padding()
+
                 Keyboard(layout: .piano(pitchRange: Pitch(60) ... Pitch(72)),
                                       noteOn: audioMIDI.noteOn, noteOff: audioMIDI.noteOff) { pitch, isActivated in
                                  KeyboardKey(pitch: pitch,

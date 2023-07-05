@@ -19,6 +19,7 @@
 		03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDF2A27E4E7005FCB49 /* Keyboard */; };
 		03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 03A81E492A4E358E0001C2FB /* Sound.sf2 */; };
 		03B990BC2A5368B1008C44E2 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03B990BB2A5368B1008C44E2 /* AudioKitUI */; };
+		03E704D12A56202F00F81316 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 03E704D02A56202F00F81316 /* Resources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		03896ECC2A27DC75005FCB49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMIDI.swift; sourceTree = "<group>"; };
 		03A81E492A4E358E0001C2FB /* Sound.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.sf2; sourceTree = "<group>"; };
+		03E704D02A56202F00F81316 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				03A81E492A4E358E0001C2FB /* Sound.sf2 */,
 				03896EC92A27DC75005FCB49 /* Assets.xcassets */,
+				03E704D02A56202F00F81316 /* Resources */,
 				03896ECB2A27DC75005FCB49 /* Preview Content */,
 			);
 			path = Resources;
@@ -207,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E704D12A56202F00F81316 /* Resources in Resources */,
 				03896ECD2A27DC75005FCB49 /* Preview Assets.xcassets in Resources */,
 				03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */,
 				03896ECA2A27DC75005FCB49 /* Assets.xcassets in Resources */,

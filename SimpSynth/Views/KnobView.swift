@@ -22,7 +22,7 @@ struct KnobView: View {
                     .foregroundColor(.white)
             }
 
-            Image("Knob")
+            Image("KnobsNEW")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .rotationEffect(.degrees(knobViewModel.rotation))
