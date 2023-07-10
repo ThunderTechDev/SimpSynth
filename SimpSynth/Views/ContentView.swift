@@ -24,7 +24,7 @@ struct ContentView: View {
         _volumeKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Volume", initialValue: 100, audioMIDI: audioMIDI, control: .volume, previousRotation: 100))
         _reverbKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Reverb", initialValue: 0.0, audioMIDI: audioMIDI, control: .reverb, previousRotation: 0))
         _delayKnobViewModel = StateObject(wrappedValue: KnobViewModel(title: "Delay", initialValue: 0.0, audioMIDI: audioMIDI, control: .delay, previousRotation: 0))
-        waveView = NodeOutputView(audioMIDI.reverb, color: .purple, backgroundColor: .black, bufferSize: 1024)
+        waveView = NodeOutputView(audioMIDI.engine.mainMixerNode!, color: Color(red: 154/255, green: 9/255, blue: 206/255), backgroundColor: .black, bufferSize: 1024)
        
     }
 
@@ -42,7 +42,7 @@ struct ContentView: View {
                         .padding(.horizontal, 1)
                     ZStack {
                             RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.purple, lineWidth: 12)
+                            .stroke(Color(red: 154/255, green: 9/255, blue: 206/255), lineWidth: 12)
                             waveView
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     }.padding(.horizontal, 10)
@@ -57,7 +57,7 @@ struct ContentView: View {
                                  KeyboardKey(pitch: pitch,
                                              isActivated: isActivated,
                                              text: "",
-                                             pressedColor: Color(.purple),
+                                             pressedColor: Color(red: 154/255, green: 9/255, blue: 206/255),
                                              alignment: .center)
                                  .gesture(DragGesture(minimumDistance: 0)
                                             .onChanged { _ in
@@ -86,5 +86,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

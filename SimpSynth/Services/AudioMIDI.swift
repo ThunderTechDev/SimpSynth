@@ -18,6 +18,7 @@ class AudioMIDI: ObservableObject {
     var sampler: AudioKit.MIDISampler
     var reverb: Reverb
     var delay: Delay
+    
 
   
     
