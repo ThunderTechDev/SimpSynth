@@ -1,4 +1,4 @@
-🎹 SimpSynth: A MIDI Synthesizer Journey in Swift 🎵
+#🎹 SimpSynth: A MIDI Synthesizer Journey in Swift 🎵
 
 
 | App SimpSynth | 
@@ -11,7 +11,7 @@
 
 SimpSynth represents a personal exploration into the world of sound synthesis. As a SwiftUI-based application, it stands as a testament to what can be achieved when curiosity meets determination. Despite its humble functionality, SimpSynth lays the foundation for my journey in Swift and SwiftUI application development.
 
-🎛️ Features
+##🎛️ Features
 
 SimpSynth encapsulates a variety of features, each representing a challenge overcome during the development journey:
 
@@ -22,7 +22,7 @@ Waveform visualization: Showcases the currently playing sound, a feature that re
 Single octave keyboard operation: A simple yet effective functionality, made possible by the integration of the Keyboard library.
 Please note, the modest scope of SimpSynth leaves room for potential enhancements such as additional sounds or octave-switching capabilities on the keyboard.
 
-💻 Technologies
+##💻 Technologies
 
 SimpSynth has been crafted using the following technologies, each representing a significant learning curve:
 
@@ -35,6 +35,6 @@ Keyboard: A graphical library integrated for keyboard functionalities. Understan
 
 SimpSynth is complete as per the initial vision but stands as an open canvas for further enhancements and improvements, embodying the never-ending learning process.
 
-🤝 Contributions
+##🤝 Contributions
 
 Your insights could be the next big leap for SimpSynth! If you see something you'd like to change or add, please open an issue to discuss it.
