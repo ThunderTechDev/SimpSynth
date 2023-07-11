@@ -3,7 +3,7 @@
 
 | App SimpSynth | 
 |:--------:|
-| <img src="https://user-images.githubusercontent.com/105247375/239377189-d7e9b13b-7982-4000-92a2-4acbf9ede5a2.png" alt="Screenshot 1" title="Screenshot 1" width="800"> |
+| <img src="https://user-images.githubusercontent.com/105247375/252780450-96c0b6c1-71ff-4830-a51f-d9fc372edf7a.png" alt="Screenshot 1" title="Screenshot 1" width="800"> |
 
 
 
