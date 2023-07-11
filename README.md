@@ -1,29 +1,33 @@
-# 🎹 SimpSynth: A Simple MIDI Synthesizer in Swift 🎵
+🎹 SimpSynth: A MIDI Synthesizer Journey in Swift 🎵
 
-## 📝 Description
+📝 Description
 
-SimpSynth is a work-in-progress 🚧 project aiming to create a simple MIDI synthesizer using Swift and SwiftUI. The goal is to be able to play several MIDI notes 🎶 and have interactive controls (knobs) to adjust parameters such as volume 🔊 and others.
+SimpSynth represents a personal exploration into the world of sound synthesis. As a SwiftUI-based application, it stands as a testament to what can be achieved when curiosity meets determination. Despite its humble functionality, SimpSynth lays the foundation for my journey in Swift and SwiftUI application development.
 
-## 🎛️ Features
+🎛️ Features
 
-Currently, SimpSynth can play MIDI notes and adjust the playback volume. The features being developed include:
+SimpSynth encapsulates a variety of features, each representing a challenge overcome during the development journey:
 
-- Playback of multiple MIDI notes 🎼
-- Adjustment of various sound parameters through interactive knobs 🎚️
+Playback of multiple MIDI notes 🎼: A core function that propels the heartbeat of SimpSynth.
+Interactive volume controls 🎚️: Realized through a determined dive into user interface design.
+Basic sound effects: Delay and Reverb, to add depth to the simple Soundfont-file-derived audio.
+Waveform visualization: Showcases the currently playing sound, a feature that required a meticulous understanding of audio data handling.
+Single octave keyboard operation: A simple yet effective functionality, made possible by the integration of the Keyboard library.
+Please note, the modest scope of SimpSynth leaves room for potential enhancements such as additional sounds or octave-switching capabilities on the keyboard.
 
-## 💻 Technologies
+💻 Technologies
 
-SimpSynth uses the following technologies:
+SimpSynth has been crafted using the following technologies, each representing a significant learning curve:
 
-- Swift: The main programming language for application development.
-- SwiftUI: Used for the application's user interface.
-- AVFoundation: Used for MIDI sound playback.
+Swift: The primary language that powered my journey through this project.
+SwiftUI: Used for designing the user interface, it was both a challenge and a delight to learn and implement.
+AudioKit: A robust framework that demanded an in-depth understanding for incorporating audio-related functionalities. Libraries such as AUDIOKITEX and AUDIOKITUI were utilized.
+AVFoundation: Employed for MIDI sound playback, it added another layer of complexity to the learning process.
+Keyboard: A graphical library integrated for keyboard functionalities. Understanding and implementing this library was a noteworthy experience.
+🏗️ Project Status
 
-## 🏗️ Project Status
+SimpSynth is complete as per the initial vision but stands as an open canvas for further enhancements and improvements, embodying the never-ending learning process.
 
-This project is currently under construction. New features and improvements are being developed.
+🤝 Contributions
 
-## 🤝 Contributions
-
-Contributions are welcome. Please open an issue to discuss what you would like to change or add.
-
+Your insights could be the next big leap for SimpSynth! If you see something you'd like to change or add, please open an issue to discuss it.
