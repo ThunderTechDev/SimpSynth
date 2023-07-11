@@ -43,7 +43,6 @@ class KnobViewModel: ObservableObject {
     }
 
     func updateAudioMIDI() {
-            // Actualiza el parámetro de audio apropiado en tu modelo de AudioMIDI basándote en la rotación
             switch control {
             case .volume:
                 let volume = Double(rotationValue) / 100
