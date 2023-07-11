@@ -7,40 +7,69 @@
 
 import AVFoundation
 import AudioKit
+import AudioKitEX
 import Keyboard
 
+
 class AudioMIDI: ObservableObject {
-    let audioEngine = AVAudioEngine()
-    private let midiSampler = AVAudioUnitSampler()
+    
+
+    let engine = AudioEngine()
+    var sampler: AudioKit.MIDISampler
+    var reverb: Reverb
+    var delay: Delay
+    
+
+  
     
     init() {
-        setupAudioEngine()
-    }
-    
-    private func setupAudioEngine() {
-        audioEngine.attach(midiSampler)
         
-        audioEngine.connect(midiSampler, to: audioEngine.mainMixerNode, format: nil)
+           
         
-        do {
-            try audioEngine.start()
-            if let url = Bundle.main.url(forResource: "8bits", withExtension: "SF2", subdirectory: "Resources") {
-                try midiSampler.loadPreset(at: url)
+            sampler = AudioKit.MIDISampler()
+            sampler.volume = 1
+            do {
+                try sampler.loadSoundFont("Sound", preset: 0, bank: 0)
+            } catch {
+                print( "Error cargando el archivo Soundfont")
             }
-        } catch {
-            print("Error al iniciar AVAudioEngine: \(error)")
+        
+            delay = Delay(sampler)
+            delay.feedback = 30.00
+            delay.time = 0.5
+            delay.dryWetMix = 0
+        
+            reverb = Reverb(delay)
+            reverb.dryWetMix = 0
+            reverb.loadFactoryPreset(.largeHall)
+            
+            
+            
+            engine.output = (reverb)
+            engine.mainMixerNode?.volume = 0.27
+            
+        
+            do {
+                try engine.start()
+                
+                
+            } catch {
+                print("Error al iniciar el motor de AudioKit: \(error)")
+            }
+            
+            
+        
         }
-    }
     
     func noteOn(pitch: Pitch, point: CGPoint) {
-        let midiNoteNumber = 20 //número provisional
-        midiSampler.startNote(UInt8(midiNoteNumber), withVelocity: 127, onChannel: 0)
-        print("note on \(midiNoteNumber)")
-    }
+        let midiNoteNumber = UInt8(pitch.midiNoteNumber)
+        sampler.play(noteNumber: midiNoteNumber, velocity: 127, channel: 0)
 
+    }
+    
     func noteOff(pitch: Pitch) {
-        let midiNoteNumber = 20 //número provisional
-        midiSampler.stopNote(UInt8(midiNoteNumber), onChannel: 0)
-        print("note off \(midiNoteNumber)")
+        let midiNoteNumber = UInt8(pitch.midiNoteNumber)
+        sampler.stop(noteNumber: midiNoteNumber, channel: 0)
+
     }
 }

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03505ADE2A29484800F9D472 /* 8bitsf.SF2 in Resources */ = {isa = PBXBuildFile; fileRef = 03505ADD2A29484800F9D472 /* 8bitsf.SF2 */; };
+		031E1D8F2A32701E002EB31D /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1D8E2A32701E002EB31D /* KnobView.swift */; };
+		031E1D912A32715E002EB31D /* KnobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1D902A32715E002EB31D /* KnobViewModel.swift */; };
+		033D8F5A2A4A3CF1007E6503 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 033D8F592A4A3CF1007E6503 /* AudioKitEX */; };
+		0385D0AD2A5C9DF100F55DDC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0385D0AC2A5C9DF100F55DDC /* Launch Screen.storyboard */; };
 		03896EC62A27DC73005FCB49 /* SimpSynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */; };
 		03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EC72A27DC73005FCB49 /* ContentView.swift */; };
 		03896ECA2A27DC75005FCB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03896EC92A27DC75005FCB49 /* Assets.xcassets */; };
@@ -15,16 +18,22 @@
 		03896EDB2A27DF9B005FCB49 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDA2A27DF9B005FCB49 /* AudioKit */; };
 		03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */; };
 		03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 03896EDF2A27E4E7005FCB49 /* Keyboard */; };
+		03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 03A81E492A4E358E0001C2FB /* Sound.sf2 */; };
+		03B990BC2A5368B1008C44E2 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03B990BB2A5368B1008C44E2 /* AudioKitUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03505ADD2A29484800F9D472 /* 8bitsf.SF2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8bitsf.SF2; sourceTree = "<group>"; };
+		031E1D8E2A32701E002EB31D /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
+		031E1D902A32715E002EB31D /* KnobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobViewModel.swift; sourceTree = "<group>"; };
+		038144012A5384DA0001F6D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0385D0AC2A5C9DF100F55DDC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		03896EC22A27DC73005FCB49 /* SimpSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03896EC52A27DC73005FCB49 /* SimpSynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpSynthApp.swift; sourceTree = "<group>"; };
 		03896EC72A27DC73005FCB49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03896EC92A27DC75005FCB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03896ECC2A27DC75005FCB49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03896EDC2A27E0BF005FCB49 /* AudioMIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMIDI.swift; sourceTree = "<group>"; };
+		03A81E492A4E358E0001C2FB /* Sound.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.sf2; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033D8F5A2A4A3CF1007E6503 /* AudioKitEX in Frameworks */,
 				03896EDB2A27DF9B005FCB49 /* AudioKit in Frameworks */,
+				03B990BC2A5368B1008C44E2 /* AudioKitUI in Frameworks */,
 				03896EE02A27E4E7005FCB49 /* Keyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +70,7 @@
 		03896EC42A27DC73005FCB49 /* SimpSynth */ = {
 			isa = PBXGroup;
 			children = (
+				038144012A5384DA0001F6D6 /* Info.plist */,
 				03896ED32A27DD9C005FCB49 /* App */,
 				03896ED42A27DDB9005FCB49 /* Models */,
 				03896ED52A27DDE8005FCB49 /* Views */,
@@ -95,7 +107,9 @@
 		03896ED52A27DDE8005FCB49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0385D0AC2A5C9DF100F55DDC /* Launch Screen.storyboard */,
 				03896EC72A27DC73005FCB49 /* ContentView.swift */,
+				031E1D8E2A32701E002EB31D /* KnobView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +117,7 @@
 		03896ED62A27DE54005FCB49 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				031E1D902A32715E002EB31D /* KnobViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -118,7 +133,7 @@
 		03896ED82A27DE76005FCB49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				03505ADD2A29484800F9D472 /* 8bitsf.SF2 */,
+				03A81E492A4E358E0001C2FB /* Sound.sf2 */,
 				03896EC92A27DC75005FCB49 /* Assets.xcassets */,
 				03896ECB2A27DC75005FCB49 /* Preview Content */,
 			);
@@ -144,6 +159,8 @@
 			packageProductDependencies = (
 				03896EDA2A27DF9B005FCB49 /* AudioKit */,
 				03896EDF2A27E4E7005FCB49 /* Keyboard */,
+				033D8F592A4A3CF1007E6503 /* AudioKitEX */,
+				03B990BB2A5368B1008C44E2 /* AudioKitUI */,
 			);
 			productName = SimpSynth;
 			productReference = 03896EC22A27DC73005FCB49 /* SimpSynth.app */;
@@ -176,6 +193,8 @@
 			packageReferences = (
 				03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */,
 				03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */,
+				033D8F582A4A3CF1007E6503 /* XCRemoteSwiftPackageReference "AudioKitEX" */,
+				03B990BA2A5368B1008C44E2 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
 			);
 			productRefGroup = 03896EC32A27DC73005FCB49 /* Products */;
 			projectDirPath = "";
@@ -191,8 +210,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03505ADE2A29484800F9D472 /* 8bitsf.SF2 in Resources */,
 				03896ECD2A27DC75005FCB49 /* Preview Assets.xcassets in Resources */,
+				03A81E4A2A4E358E0001C2FB /* Sound.sf2 in Resources */,
+				0385D0AD2A5C9DF100F55DDC /* Launch Screen.storyboard in Resources */,
 				03896ECA2A27DC75005FCB49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03896EC82A27DC73005FCB49 /* ContentView.swift in Sources */,
+				031E1D912A32715E002EB31D /* KnobViewModel.swift in Sources */,
 				03896EDD2A27E0BF005FCB49 /* AudioMIDI.swift in Sources */,
+				031E1D8F2A32701E002EB31D /* KnobView.swift in Sources */,
 				03896EC62A27DC73005FCB49 /* SimpSynthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +360,11 @@
 				DEVELOPMENT_TEAM = 6Z3S569SKT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpSynth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -370,9 +394,11 @@
 				DEVELOPMENT_TEAM = 6Z3S569SKT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpSynth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -415,6 +441,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		033D8F582A4A3CF1007E6503 /* XCRemoteSwiftPackageReference "AudioKitEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitEX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
@@ -431,9 +465,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		03B990BA2A5368B1008C44E2 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		033D8F592A4A3CF1007E6503 /* AudioKitEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 033D8F582A4A3CF1007E6503 /* XCRemoteSwiftPackageReference "AudioKitEX" */;
+			productName = AudioKitEX;
+		};
 		03896EDA2A27DF9B005FCB49 /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 03896ED92A27DF9B005FCB49 /* XCRemoteSwiftPackageReference "AudioKit" */;
@@ -443,6 +490,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 03896EDE2A27E4E7005FCB49 /* XCRemoteSwiftPackageReference "Keyboard" */;
 			productName = Keyboard;
+		};
+		03B990BB2A5368B1008C44E2 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03B990BA2A5368B1008C44E2 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
